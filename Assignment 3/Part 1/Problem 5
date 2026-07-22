@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+bool findPlayer(char arr[], int size, char target) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == target) {
+            return true;
+        }
+    }
+    return false;
+}
+
+int main() {
+    const int SIZE = 11;
+    char team[SIZE] = {'b', 'r', 'i', 'm', 's', 'f', 'a', 'h', 'n', 'k', 'z'};
+    char target;
+
+    cout << "Enter the player's initial to search for: ";
+    cin >> target;
+
+    bool found = findPlayer(team, SIZE, target);
+
+    if (found) {
+        cout << "Player is in the team" << endl;
+    } else {
+        cout << "Player not found" << endl;
+    }
+
+    return 0;
+}
