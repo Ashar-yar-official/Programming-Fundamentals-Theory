@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double runner1, runner2, runner3;
+
+    cout << "Enter the time (in minutes) for runner 1: ";
+    cin >> runner1;
+    cout << "Enter the time (in minutes) for runner 2: ";
+    cin >> runner2;
+    cout << "Enter the time (in minutes) for runner 3: ";
+    cin >> runner3;
+
+    // Lower time means better place
+    if (runner1 < runner2 && runner1 < runner3) {
+        cout << "Runner 1 finished 1st." << endl;
+        if (runner2 < runner3) {
+            cout << "Runner 2 finished 2nd." << endl;
+            cout << "Runner 3 finished 3rd." << endl;
+        } else {
+            cout << "Runner 3 finished 2nd." << endl;
+            cout << "Runner 2 finished 3rd." << endl;
+        }
+    } else if (runner2 < runner1 && runner2 < runner3) {
+        cout << "Runner 2 finished 1st." << endl;
+        if (runner1 < runner3) {
+            cout << "Runner 1 finished 2nd." << endl;
+            cout << "Runner 3 finished 3rd." << endl;
+        } else {
+            cout << "Runner 3 finished 2nd." << endl;
+            cout << "Runner 1 finished 3rd." << endl;
+        }
+    } else {
+        cout << "Runner 3 finished 1st." << endl;
+        if (runner1 < runner2) {
+            cout << "Runner 1 finished 2nd." << endl;
+            cout << "Runner 2 finished 3rd." << endl;
+        } else {
+            cout << "Runner 2 finished 2nd." << endl;
+            cout << "Runner 1 finished 3rd." << endl;
+        }
+    }
+
+    return 0;
+}
