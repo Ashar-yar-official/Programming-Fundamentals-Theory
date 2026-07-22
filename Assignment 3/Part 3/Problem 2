@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int R, C;
+    cout << "Enter Rows and Columns: ";
+    cin >> R >> C;
+
+    int seats[R][C];
+
+    for(int i = 0; i < R; i++)
+    {
+        for(int j = 0; j < C; j++)
+        {
+            cout << "Enter roll number for desk (" << i << ", " << j << "): ";
+            cin >> seats[i][j];
+        }
+    }
+
+    cout << "\nSeating Chart:\n";
+    for(int i = 0; i < R; i++)
+    {
+        for(int j = 0; j < C; j++)
+        {
+            cout << seats[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
