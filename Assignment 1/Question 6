@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+// Given: a = 2, b = 4, c = 6
+// This program verifies the boolean expressions from Question 6.
+
+int main() {
+    int a = 2, b = 4, c = 6;
+
+    // A) a == 4 || b > 2
+    cout << "A) " << boolalpha << (a == 4 || b > 2) << endl; // True (b > 2 is true)
+
+    // B) 6 <= c && a > 3
+    // (assuming the original condition was "a > 3", since "a 3" is incomplete)
+    cout << "B) " << (6 <= c && a > 3) << endl; // False (a > 3 is false)
+
+    // C) 1 != b && c != 3
+    cout << "C) " << (1 != b && c != 3) << endl; // True (both conditions true)
+
+    // D) a >= -1 || a <= b
+    cout << "D) " << (a >= -1 || a <= b) << endl; // True (both conditions true)
+
+    // E) !(a > 2)
+    cout << "E) " << (!(a > 2)) << endl; // True (a > 2 is false, so ! makes it true)
+
+    return 0;
+}
