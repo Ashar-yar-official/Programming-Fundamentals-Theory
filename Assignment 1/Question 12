@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double annualIncome;
+    double yearsEmployed;
+
+    cout << "Enter your annual income: ";
+    cin >> annualIncome;
+    cout << "Enter the number of years at your current job: ";
+    cin >> yearsEmployed;
+
+    if (annualIncome >= 35000 && yearsEmployed > 5) {
+        cout << "You qualify for the loan." << endl;
+    } else {
+        cout << "You do not qualify for the loan." << endl;
+    }
+
+    return 0;
+}
