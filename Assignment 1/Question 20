@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    long seconds;
+
+    cout << "Enter a number of seconds: ";
+    cin >> seconds;
+
+    if (seconds >= 60) {
+        cout << "That is " << (seconds / 60.0) << " minutes." << endl;
+    }
+
+    if (seconds >= 3600) {
+        cout << "That is " << (seconds / 3600.0) << " hours." << endl;
+    }
+
+    if (seconds >= 86400) {
+        cout << "That is " << (seconds / 86400.0) << " days." << endl;
+    }
+
+    return 0;
+}
