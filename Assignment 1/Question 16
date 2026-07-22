@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double beginningBalance;
+    int numChecks;
+    double checkFeeRate;
+    double totalFee = 10.0; // base monthly fee
+
+    cout << "Enter the beginning balance: ";
+    cin >> beginningBalance;
+    cout << "Enter the number of checks written: ";
+    cin >> numChecks;
+
+    if (numChecks < 20) {
+        checkFeeRate = 0.10;
+    } else if (numChecks <= 39) {
+        checkFeeRate = 0.08;
+    } else if (numChecks <= 59) {
+        checkFeeRate = 0.06;
+    } else {
+        checkFeeRate = 0.04;
+    }
+
+    totalFee += numChecks * checkFeeRate;
+
+    if (beginningBalance < 400) {
+        totalFee += 15;
+    }
+
+    cout << "The bank's service fee for the month is: $" << totalFee << endl;
+
+    return 0;
+}
