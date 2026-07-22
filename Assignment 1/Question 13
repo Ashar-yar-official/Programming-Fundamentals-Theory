@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int model;
+
+    cout << "Which TV model do you want to purchase (300, 200, or 100)? ";
+    cin >> model;
+
+    if (model == 300) {
+        cout << "Features: Picture-in-a-picture, Stereo sound, Remote control" << endl;
+    } else if (model == 200) {
+        cout << "Features: Stereo sound, Remote control" << endl;
+    } else if (model == 100) {
+        cout << "Features: Remote control only" << endl;
+    } else {
+        cout << "Invalid model selected." << endl;
+    }
+
+    return 0;
+}
