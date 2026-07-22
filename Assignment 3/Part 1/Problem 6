@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int calculateLength(char word[]) {
+    int count = 0;
+    while (word[count] != '\0') {
+        count++;
+    }
+    return count;
+}
+
+int main() {
+    char word[100];
+
+    cout << "Enter a word: ";
+    cin >> word;
+
+    int length = calculateLength(word);
+
+    cout << "Length of the word is: " << length << endl;
+
+    return 0;
+}
