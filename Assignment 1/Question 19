@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int package;
+    double gbUsed;
+    double totalDue;
+
+    cout << "Enter the package purchased (1, 2, or 3): ";
+    cin >> package;
+    cout << "Enter the number of gigabytes used: ";
+    cin >> gbUsed;
+
+    if (package == 1) {
+        totalDue = 39.99;
+        if (gbUsed > 4) {
+            totalDue += (gbUsed - 4) * 10;
+        }
+    } else if (package == 2) {
+        totalDue = 59.99;
+        if (gbUsed > 8) {
+            totalDue += (gbUsed - 8) * 5;
+        }
+    } else if (package == 3) {
+        totalDue = 69.99;
+    } else {
+        cout << "Invalid package selection." << endl;
+        return 0;
+    }
+
+    cout << "The total amount due is: $" << totalDue << endl;
+
+    return 0;
+}
