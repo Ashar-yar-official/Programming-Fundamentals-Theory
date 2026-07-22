@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int choice;
+    int months;
+    double rate;
+    double total;
+
+    cout << "1. Standard Adult Membership" << endl;
+    cout << "2. Child Membership" << endl;
+    cout << "3. Senior Citizen Membership" << endl;
+    cout << "4. Quit the Program" << endl;
+    cout << "Enter your choice (1-4): ";
+    cin >> choice;
+
+    if (choice == 1) {
+        rate = 40.00;
+    } else if (choice == 2) {
+        rate = 20.00;
+    } else if (choice == 3) {
+        rate = 30.00;
+    } else if (choice == 4) {
+        cout << "Goodbye!" << endl;
+        return 0;
+    } else {
+        cout << "Invalid choice." << endl;
+        return 0;
+    }
+
+    cout << "Enter the number of months you wish to join: ";
+    cin >> months;
+
+    total = rate * months;
+
+    cout << "Total amount to pay: Rs. " << total << endl;
+
+    return 0;
+}
