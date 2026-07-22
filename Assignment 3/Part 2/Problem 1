@@ -1,0 +1,63 @@
+#include <iostream>
+using namespace std;
+
+int calculate2Low(int arr[], int size) {
+    // Make a copy so the original array order is not disturbed
+    int temp[size];
+    for (int i = 0; i < size; i++) {
+        temp[i] = arr[i];
+    }
+
+    // Simple bubble sort (ascending)
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - 1 - i; j++) {
+            if (temp[j] > temp[j + 1]) {
+                int t = temp[j];
+                temp[j] = temp[j + 1];
+                temp[j + 1] = t;
+            }
+        }
+    }
+
+    return temp[1]; // second smallest after sorting
+}
+
+int calculate2High(int arr[], int size) {
+    int temp[size];
+    for (int i = 0; i < size; i++) {
+        temp[i] = arr[i];
+    }
+
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - 1 - i; j++) {
+            if (temp[j] > temp[j + 1]) {
+                int t = temp[j];
+                temp[j] = temp[j + 1];
+                temp[j + 1] = t;
+            }
+        }
+    }
+
+    return temp[size - 2]; // second largest after sorting
+}
+
+int main() {
+    int n;
+
+    cout << "Enter the number of students: ";
+    cin >> n;
+
+    int scores[n];
+    cout << "Enter " << n << " test scores: ";
+    for (int i = 0; i < n; i++) {
+        cin >> scores[i];
+    }
+
+    int secondLowest = calculate2Low(scores, n);
+    int secondHighest = calculate2High(scores, n);
+
+    cout << "2nd Lowest score: " << secondLowest << endl;
+    cout << "2nd Highest score: " << secondHighest << endl;
+
+    return 0;
+}
