@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+double getBowlingAverage(int runsConceded, int wicketsTaken)
+{
+    if(wicketsTaken == 0){
+        return 0.0;
+    }
+    return (double)runsConceded / wicketsTaken;
+}
+
+int main()
+{
+    int runs, wickets;
+    cin >> runs >> wickets;
+
+    double average = getBowlingAverage(runs, wickets);
+
+    cout << "Bowling Average: " << average << endl;
+
+    return 0;
+}
