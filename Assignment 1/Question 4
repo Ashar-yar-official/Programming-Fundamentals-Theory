@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a = 10;
+    double b = 10;
+
+    a = a + 0.2;
+
+    if (a > b) {
+        cout << "a is larger and b is smaller" << endl;
+    } else if (b > a) {
+        cout << "b is larger and a is smaller" << endl;
+    } else {
+        cout << "a and b are equal" << endl;
+    }
+
+    cout << "a = " << a << ", b = " << b << endl;
+
+    return 0;
+}
