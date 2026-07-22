@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double sales, commissionRate, commission;
+
+    cout << "Enter the sales amount: ";
+    cin >> sales;
+
+    if (sales <= 10000) {
+        commissionRate = 0.10;
+    } else if (sales <= 15000) {
+        commissionRate = 0.15;
+    } else {
+        commissionRate = 0.20;
+    }
+
+    commission = sales * commissionRate;
+
+    cout << "Commission rate: " << commissionRate << endl;
+    cout << "Commission amount: " << commission << endl;
+
+    return 0;
+}
