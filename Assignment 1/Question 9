@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Display ASCII values of alphabets A-Z using explicit type casting
+    for (char letter = 'A'; letter <= 'Z'; letter++) {
+        int asciiValue = int(letter); // explicit type casting from char to int
+        cout << letter << " = " << asciiValue << endl;
+    }
+
+    return 0;
+}
