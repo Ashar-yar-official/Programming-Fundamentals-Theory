@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int countVowels(char word[]) {
+    int count = 0;
+    int i = 0;
+
+    while (word[i] != '\0') {
+        char ch = word[i];
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+            ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+            count++;
+        }
+        i++;
+    }
+
+    return count;
+}
+
+int main() {
+    char word[100];
+
+    cout << "Enter a word: ";
+    cin >> word;
+
+    int totalVowels = countVowels(word);
+
+    cout << "Total Vowels: " << totalVowels << endl;
+
+    return 0;
+}
