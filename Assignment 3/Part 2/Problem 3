@@ -1,0 +1,21 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+double celsiusToFahrenheit(double celsius) {
+    return (celsius * 9 / 5) + 32;
+}
+
+int main() {
+    double celsius;
+
+    cout << "Enter the temperature in Celsius: ";
+    cin >> celsius;
+
+    double fahrenheit = celsiusToFahrenheit(celsius);
+
+    cout << fixed << setprecision(1);
+    cout << "Fahrenheit: " << fahrenheit << endl;
+
+    return 0;
+}
