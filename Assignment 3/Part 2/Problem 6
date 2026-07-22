@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int SIZE = 5;
+    char letters[SIZE];
+
+    cout << "Enter " << SIZE << " characters: ";
+    for (int i = 0; i < SIZE; i++) {
+        cin >> letters[i];
+    }
+
+    // Bubble sort
+    for (int i = 0; i < SIZE - 1; i++) {
+        for (int j = 0; j < SIZE - 1 - i; j++) {
+            if (letters[j] > letters[j + 1]) {
+                char temp = letters[j];
+                letters[j] = letters[j + 1];
+                letters[j + 1] = temp;
+            }
+        }
+    }
+
+    cout << "Sorted Letters: ";
+    for (int i = 0; i < SIZE; i++) {
+        cout << letters[i];
+    }
+    cout << endl;
+
+    return 0;
+}
